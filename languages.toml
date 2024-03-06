@@ -1,0 +1,80 @@
+[[language]]
+name = "elixir"
+scope = "source.elixir"
+injection-regex = "elixir"
+file-types = ["ex", "exs", "html.heex"]
+roots = ["mix.exs"]
+auto-format = true
+diagnostic-severity = "Hint"
+comment-token = "#"
+indent = {tab-width = 2, unit = " "}
+language-servers = ["elixir-ls"]
+
+[language-server.elixir-ls]
+command = "elixir-ls"
+
+[[language]]
+name = "nim"
+file-types = ["nim", "nims"]
+shebangs = ["nim"]
+comment-token = "#"
+auto-format = true
+indent = { tab-width = 2, unit = " " }
+language-servers = ["nimlsp"]
+
+[language-server.nimlsp]
+command = "nimlsp"
+
+[[language]]
+name = "bqn"
+file-types = ["bqn"]
+shebangs = ["BQN", "CBQN", "bqn", "cbqn"]
+scope = "source.bqn"
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+roots = []
+injection-regex = "bqn"
+language-servers = ["bqnlsp"]
+
+[language-server.bqnlsp]
+command = "bqnlsp"
+language-id = "bqn"
+
+[[grammar]]
+name = "bqn"
+source.git = "https://github.com/shnarazk/tree-sitter-bqn"
+source.rev =  "e9cfadd51fcf941332a627bebc11c3a716dd6fe7"
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+"'" = "'"
+'"' = '"'
+'⟨' = '⟩'
+
+
+[language-server.zls]
+command = "/Users/lokilow/sof/zls/zig-out/bin/zls"
+
+
+[[language]]
+name = "uiua"
+scope = "source.uiua"
+injection-regex = "uiua"
+file-types = ["ua"]
+auto-format = true
+diagnostic-severity = "Hint"
+# comment-token = "#"
+roots = []
+indent = {tab-width = 2, unit = " "}
+language-servers = ["uiua"]
+
+[language-server.uiua]
+command = "uiua"
+args = ["lsp"]
+
+[[grammar]]
+name = "uiua"
+source.git = "https://github.com/shnarazk/tree-sitter-uiua"
+source.rev = "main"

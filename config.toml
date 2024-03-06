@@ -1,0 +1,7 @@
+[keys.insert."\\"]
+"=" = [ ":insert-output /bin/echo -n ×", "move_char_right" ]
+minus = [ ":insert-output /bin/echo -n ÷", "move_char_right" ]
+"+" = [ ":insert-output /bin/echo -n ⋆", "move_char_right" ]
+
+[editor.soft-wrap]
+enable = true
